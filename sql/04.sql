@@ -10,5 +10,5 @@ INNER JOIN inventory i on f.film_id = i.film_id
 INNER JOIN rental r on r.inventory_id=i.inventory_id
 WHERE r.customer_id = 1
 GROUP BY f.title
-HAVING count(r.customer_id) > 1
+HAVING COUNT(r.customer_id) > 1
 ORDER BY title;
